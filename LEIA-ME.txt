@@ -28,16 +28,13 @@ FALTA APENAS: clinica1.webp, clinica2.webp, clinica3.webp, clinica4.webp
    Imagens que não existirem são ignoradas automaticamente.
 
 
-PENDÊNCIA DE CONFIGURAÇÃO
--------------------------
-Microsoft Clarity: abra o index.html e troque
+TAGS INSTALADAS
+---------------
+Google Tag Manager: GTM-NB2R85MT
+Microsoft Clarity: y4wzwm6ddl
 
-    var CLARITY_ID = 'SEU_ID_CLARITY';
-
-pelo ID do projeto no Clarity (algo como 'a1b2c3d4e5').
-Enquanto estiver com o valor de exemplo, o script simplesmente não carrega.
-
-Google Tag Manager já está instalado com o ID GTM-NB2R85MT.
+As duas carregam na primeira interação do visitante (ou 3,5s depois),
+para não pesar no carregamento inicial da página.
 
 
 O QUE JÁ ESTÁ CONFIGURADO
