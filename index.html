@@ -121,7 +121,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 0 0 64px;
+      padding: 0 0 96px;
       position: relative;
       overflow: hidden;
       background: var(--branco);
@@ -409,6 +409,10 @@
       margin-bottom: 40px;
     }
 
+    /* titulos das secoes de duas colunas, um pouco menores no desktop */
+    .sec-porque .sec-titulo,
+    .sec-local .sec-titulo { font-size: 32px; }
+
     .sec-header { text-align: center; }
     .sec-header .sec-titulo { max-width: 780px; margin-left: auto; margin-right: auto; }
     .sec-header .sec-sub { margin-left: auto; margin-right: auto; }
@@ -643,11 +647,11 @@
     @media (max-width: 900px) {
       .hero {
         min-height: calc(100svh - 31px);
-        padding: 0 0 48px;
+        padding: 0 0 72px;
       }
       .hero-content { padding: 0 20px; }
       .hero-banner { height: 180px; margin-bottom: 18px; border-radius: 0 0 50% 50% / 0 0 42px 42px; }
-      .hero h1 { font-size: 32px; letter-spacing: -1px; margin-bottom: 14px; }
+      .hero h1 { font-size: 38px; letter-spacing: -1px; margin-bottom: 14px; }
       .br-mob { display: inline; }
       .br-desk { display: none; }
       .hero-logo { width: 94px; height: 94px; margin-bottom: 14px; padding: 5px; }
@@ -665,7 +669,9 @@
       .review-img-card { max-width: 100%; }
 
       .sec { padding: 56px 20px; text-align: center; }
-      .sec-titulo { font-size: 26px; }
+      .sec-titulo,
+      .sec-porque .sec-titulo,
+      .sec-local .sec-titulo { font-size: 30px; }
       .sec-sub { margin-left: auto; margin-right: auto; margin-bottom: 32px; }
 
       .servicos-grid { grid-template-columns: 1fr; gap: 12px; }
@@ -679,7 +685,7 @@
       .motivo { text-align: left; max-width: 440px; width: 100%; }
 
       .sec-cta { padding: 56px 20px; }
-      .sec-cta h2 { font-size: 26px; }
+      .sec-cta h2 { font-size: 30px; }
 
       .sec-local { padding: 56px 20px; }
       .sec-local-inner { grid-template-columns: 1fr; gap: 32px; }
@@ -694,9 +700,6 @@
       .wpp-float svg { width: 30px; height: 30px; }
     }
 
-    @media (max-width: 420px) {
-      .hero h1 { font-size: 29px; }
-    }
   </style>
 </head>
 <body>
@@ -725,8 +728,8 @@
     </div>
     <p class="hero-local">Vier Vets</p>
     <h1>
-      <span class="h1-destaque">Centro Veterinário 24h</span><br />
-      em Vitória da Conquista
+      <span class="h1-destaque">Centro Veterinário<br class="br-mob" /> 24h</span><br class="br-desk" />
+      em Vitória<br class="br-mob" /> da Conquista
     </h1>
     <p class="hero-frase">Cuidamos de quem você mais ama, com a tecnologia que faz a diferença.</p>
     <div class="hero-btns">
@@ -905,24 +908,24 @@
   <div class="servicos-grid">
     <div class="servico-card">
       <div class="servico-icone">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M5 3v8a7 7 0 0 0 14 0V3"/><path d="M12 18v3"/><circle cx="12" cy="21" r="1.6"/></svg>
       </div>
-      <h3>Tomografia Computadorizada</h3>
-      <p>A única tomografia veterinária do interior da Bahia, para diagnósticos rápidos e precisos.</p>
+      <h3>Consulta clínica</h3>
+      <p>Avaliação completa do seu pet, do check-up de rotina ao acompanhamento de doenças.</p>
+    </div>
+    <div class="servico-card">
+      <div class="servico-icone">
+        <svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
+      </div>
+      <h3>Emergência 24 horas</h3>
+      <p>Equipe de plantão todos os dias, a qualquer hora, para os momentos que não podem esperar.</p>
     </div>
     <div class="servico-card">
       <div class="servico-icone">
         <svg viewBox="0 0 24 24"><path d="M4 4l7 7"/><path d="M9 4l-5 5"/><path d="M11 11l9 9"/><path d="M20 4l-9 9"/><circle cx="18" cy="18" r="2"/></svg>
       </div>
-      <h3>Cirurgias de alta complexidade</h3>
+      <h3>Cirurgias</h3>
       <p>Cirurgias ortopédicas, neurológicas e procedimentos avançados com toda a segurança que seu pet merece.</p>
-    </div>
-    <div class="servico-card">
-      <div class="servico-icone">
-        <svg viewBox="0 0 24 24"><path d="M5 3v8a7 7 0 0 0 14 0V3"/><path d="M12 18v3"/><circle cx="12" cy="21" r="1.6"/></svg>
-      </div>
-      <h3>Endoscopia</h3>
-      <p>Endoscopia digestiva e respiratória com equipamentos modernos.</p>
     </div>
     <div class="servico-card">
       <div class="servico-icone">
@@ -933,17 +936,17 @@
     </div>
     <div class="servico-card">
       <div class="servico-icone">
-        <svg viewBox="0 0 24 24"><path d="M3 12h4l2-5 3 10 2.5-6 1.5 3h5"/></svg>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
       </div>
-      <h3>Cardiologia</h3>
-      <p>Eletrocardiograma e ecocardiograma com especialistas dedicados.</p>
+      <h3>Tomografia Computadorizada</h3>
+      <p>A única tomografia veterinária do interior da Bahia, para diagnósticos rápidos e precisos.</p>
     </div>
     <div class="servico-card">
       <div class="servico-icone">
-        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M2 5v14"/><path d="M2 9h16a3 3 0 0 1 3 3v7"/><path d="M2 17h19"/><circle cx="7" cy="13" r="1.6"/></svg>
       </div>
-      <h3>Especialistas de referência</h3>
-      <p>Profissionais reconhecidos em ortopedia, neurocirurgia, gastroenterologia e ecocardiografia.</p>
+      <h3>Internação</h3>
+      <p>Acompanhamento contínuo do seu pet, com a equipe por perto a qualquer hora do dia ou da noite.</p>
     </div>
   </div>
 </div>
@@ -954,7 +957,7 @@
   <div class="sec-porque">
     <div class="porque-intro">
       <span class="sec-tag">Por que a Vier Vets?</span>
-      <h2 class="sec-titulo" style="font-size:32px;">Tecnologia e cuidado<br class="br-mob" /> <span>em cada atendimento</span></h2>
+      <h2 class="sec-titulo">Tecnologia e cuidado<br class="br-mob" /> <span>em cada atendimento</span></h2>
       <p class="sec-sub">Um centro veterinário completo com o carinho de quem trata seu pet como parte da família.</p>
       <div class="clinica-galeria">
         <img src="clinica1.webp" class="ativo" alt="Estrutura da Vier Vets Centro Veterinário 24h" loading="lazy" decoding="async" />
@@ -1015,7 +1018,7 @@
   <div class="sec-local-inner">
     <div>
       <span class="sec-tag">Onde estamos</span>
-      <h2 class="sec-titulo" style="font-size:32px;"><span>Localização Privilegiada</span><br />Fácil de chegar, difícil de esquecer</h2>
+      <h2 class="sec-titulo"><span>Localização Privilegiada</span><br />Fácil de chegar, difícil de esquecer</h2>
       <div class="info-box">
         <div class="info-linha">
           <span class="ico">📍</span>
@@ -1029,6 +1032,13 @@
           <div>
             <strong>Horário</strong>
             Aberto 24 horas, todos os dias da semana.
+          </div>
+        </div>
+        <div class="info-linha">
+          <span class="ico">🅿️</span>
+          <div>
+            <strong>Estacionamento</strong>
+            Estacionamento próprio para você chegar com tranquilidade.
           </div>
         </div>
       </div>
