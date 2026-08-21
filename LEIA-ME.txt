@@ -30,7 +30,7 @@ FALTA APENAS: clinica1.webp, clinica2.webp, clinica3.webp, clinica4.webp
 
 TAGS INSTALADAS
 ---------------
-Google Tag Manager: GTM-NB2R85MT
+Google Tag Manager: GTM-NHXWSXCD
 Microsoft Clarity: y4wzwm6ddl
 
 As duas carregam na primeira interação do visitante (ou 3,5s depois),
